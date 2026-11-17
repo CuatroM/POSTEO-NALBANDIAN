@@ -1,0 +1,39 @@
+name: Actualizar productos FEMA (SINCRO PRODUCTOS FEMA BASE)
+
+# Trae de BaseLinker (solo lectura) costo y stock de los productos FEMA que mantiene
+# la sincronización, y los guarda en datos/productos_fema.csv para armar los contenidos.
+
+on:
+  schedule:
+    # Todos los días a las 7:20 de Argentina (10:20 UTC)
+    - cron: "20 10 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: productos-nalbandian
+  cancel-in-progress: false
+
+jobs:
+  productos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Exportar desde BaseLinker
+        env:
+          BL_TOKEN: ${{ secrets.BL_TOKEN }}
+        run: python datos/exportar_productos.py
+      - name: Guardar base de productos
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898694+github-actions[bot]@users.noreply.github.com"
+          git add datos
+          git diff --cached --quiet || git commit -m "Productos FEMA actualizados desde BaseLinker"
+          git pull --rebase -q
+          git push
