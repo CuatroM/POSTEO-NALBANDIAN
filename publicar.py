@@ -123,8 +123,17 @@ def diagnostico_facebook():
     if "instagram_business_account" in pag:
         ig = pag["instagram_business_account"]
         candidatos[ig["id"]] = f"@{ig.get('username')} (token de página)"
-    for p in api("GET", "me/accounts", salir=False,
-                 fields="name,instagram_business_account{id,username}").get("data", []):
+    perm = api("GET", "me/permissions", salir=False)
+    if "error" in perm:
+        aviso(f"Diag: me/permissions -> {perm['error'].get('message')}")
+    else:
+        aviso("Diag: permisos del token: " + ", ".join(
+            f"{x.get('permission')}({x.get('status')})" for x in perm.get("data", [])))
+    cuentas = api("GET", "me/accounts", salir=False, fields="name,instagram_business_account{id,username}")
+    if "error" in cuentas:
+        aviso(f"Diag: me/accounts -> {cuentas['error'].get('message')}")
+    aviso(f"Diag: páginas que ve el token: {len(cuentas.get('data', []))}")
+    for p in cuentas.get("data", []):
         ig = p.get("instagram_business_account")
         aviso(f"Diag: página '{p.get('name')}' -> Instagram: {ig.get('username') if ig else 'NO VINCULADO'}")
         if ig:
