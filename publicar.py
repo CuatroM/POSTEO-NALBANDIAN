@@ -138,6 +138,23 @@ def diagnostico_facebook():
         aviso(f"Diag: página '{p.get('name')}' -> Instagram: {ig.get('username') if ig else 'NO VINCULADO'}")
         if ig:
             candidatos[ig["id"]] = f"@{ig.get('username')} (página {p.get('name')})"
+    # Usuario del sistema: buscar páginas e Instagram a través de los negocios
+    for b in api("GET", "me/businesses", salir=False, fields="id,name").get("data", []):
+        aviso(f"Diag: negocio '{b.get('name')}' ({b.get('id')})")
+        for borde in ("owned_pages", "client_pages"):
+            for p in api("GET", f"{b['id']}/{borde}", salir=False,
+                         fields="name,instagram_business_account{id,username}").get("data", []):
+                ig = p.get("instagram_business_account")
+                aviso(f"Diag:   {borde}: '{p.get('name')}' -> Instagram: {ig.get('username') if ig else 'NO VINCULADO'}")
+                if ig:
+                    candidatos[ig["id"]] = f"@{ig.get('username')} (página {p.get('name')})"
+        for borde in ("instagram_business_accounts", "owned_instagram_accounts"):
+            r = api("GET", f"{b['id']}/{borde}", salir=False, fields="id,username")
+            if "error" in r:
+                continue
+            for ig in r.get("data", []):
+                aviso(f"Diag:   {borde}: @{ig.get('username')} ({ig.get('id')})")
+                candidatos.setdefault(ig["id"], f"@{ig.get('username')} (negocio {b.get('name')})")
     if not candidatos:
         aviso("Diag: este token no ve ninguna página con Instagram. Si es un usuario del sistema, "
               "asignale la página y la cuenta de Instagram en el Business Manager y generá el token de nuevo.")
