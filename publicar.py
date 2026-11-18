@@ -129,6 +129,9 @@ def diagnostico_facebook():
         aviso(f"Diag: página '{p.get('name')}' -> Instagram: {ig.get('username') if ig else 'NO VINCULADO'}")
         if ig:
             candidatos[ig["id"]] = f"@{ig.get('username')} (página {p.get('name')})"
+    if not candidatos:
+        aviso("Diag: este token no ve ninguna página con Instagram. Si es un usuario del sistema, "
+              "asignale la página y la cuenta de Instagram en el Business Manager y generá el token de nuevo.")
     for i, origen in candidatos.items():
         aviso(f"Diag: cuenta de Instagram disponible: IG_USER_ID={i} -> {origen}")
     return list(candidatos)
@@ -159,6 +162,16 @@ def main():
     global IG_USER_ID
     candidatos = diagnostico_facebook() if ES_FACEBOOK else []
     cuenta = api("GET", IG_USER_ID, salir=False, fields="username")
+    if "error" in cuenta and ES_FACEBOOK:
+        # Puede ser el ID de la página de Facebook: busco su Instagram vinculado
+        pag = api("GET", IG_USER_ID, salir=False, fields="name,instagram_business_account{id,username}")
+        if "instagram_business_account" in pag:
+            ig = pag["instagram_business_account"]
+            aviso(f"El IG_USER_ID es de la página '{pag.get('name')}'; uso su Instagram @{ig.get('username')} "
+                  f"(IG_USER_ID={ig['id']})")
+            candidatos = [ig["id"]]
+        elif "error" not in pag:
+            aviso(f"Diag: el ID cargado es '{pag.get('name')}', sin Instagram vinculado accesible")
     if "error" in cuenta and len(candidatos) == 1:
         aviso(f"El IG_USER_ID cargado no sirve; uso el que encontré: {candidatos[0]}")
         IG_USER_ID = candidatos[0]
