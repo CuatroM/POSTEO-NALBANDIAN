@@ -1,8 +1,8 @@
 # Un SKU por línea (opcional: "SKU | texto de búsqueda"). Las fotos quedan en disenos/productos/<SKU>.jpg
-69383235
-69383238
-69383243
-69383810
-69606708
-69606710
-69606713
+69383235 | drive
+69383238 | drive
+69383243 | drive
+69383810 | drive
+69606708 | drive
+69606710 | drive
+69606713 | drive

@@ -302,15 +302,31 @@ def main():
     for sku, q in pedido:
         print(f"{sku}:")
         hallado = encontrar(sku, q)
-        if not hallado:
+        if not hallado and q.strip().lower() == "drive":   # no está en Drive: probar la web
+            hallado = encontrar(sku, "")
+        img = None
+        if hallado:
+            try:
+                img = requests.get(hallado[2].split("#")[0], headers=UA, timeout=120)
+                img.raise_for_status()
+            except Exception as ex:  # noqa: BLE001
+                print(f"  no se pudo bajar {hallado[2]} ({ex}); pruebo en Drive")
+                img = None
+                hallado = encontrar_drive(sku) if q.strip().lower() != "drive" else None
+                if hallado:
+                    try:
+                        img = requests.get(hallado[2].split("#")[0], headers=UA, timeout=120)
+                        img.raise_for_status()
+                    except Exception as ex2:  # noqa: BLE001
+                        print(f"  Drive: no se pudo bajar ({ex2})")
+                        img = None
+        if not img:
             faltan.append(sku)
             print("  NO ENCONTRADO")
             continue
         sitio, prod, url = hallado
         ext = (url.split("#")[1] if "#" in url else Path(url.split("?")[0]).suffix.lower()) or ".jpg"
         destino = PRODUCTOS / f"{sku}{ext}"
-        img = requests.get(url.split("#")[0], headers=UA, timeout=120)
-        img.raise_for_status()
         for viejo in PRODUCTOS.glob(f"{sku}.*"):
             viejo.unlink()
         destino.write_bytes(img.content)
