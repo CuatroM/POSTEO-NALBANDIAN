@@ -143,6 +143,11 @@ PAGINAS_HTML = [
     "https://www.femacba.com.ar/electrobombas",
     "https://www.femacba.com.ar/hogar",
     "https://www.femacba.com.ar/limpieza",
+    "https://www.femacba.com.ar/aire-libre",
+    "https://www.femacba.com.ar/camping",
+    "https://www.femacba.com.ar/camping/reposeras",
+    "https://www.femacba.com.ar/hogar-y-camping",
+    "https://www.femacba.com.ar/jardineria/reposeras",
 ] + [f"https://www.femacba.com.ar/compresores/compresores-1?{k}={n}" for k in ("page", "pagina", "p") for n in range(2, 6)]
 
 
