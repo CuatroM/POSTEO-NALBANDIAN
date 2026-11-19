@@ -11,16 +11,16 @@ ENVIO = "ENVÍO GRATIS POR TRANSPORTE CREDIFIN"
 # Una placa por producto: (sku, título de la placa, bajada, nombre comercial, detalle)
 PLACAS = [
     ("69606739#FEMA", "Conservadora<br><em>24 litros</em>", "Bebidas frías para la escapada.",
-     "Conservadora FEMA 24 L", "Liviana y fácil de llevar"),
+     "Conservadora FEMA 24&nbsp;L", "Liviana y fácil de llevar"),
     ("69606743#FEMA", "Conservadora<br><em>57 litros</em>", "Para el finde largo o la familia completa.",
-     "Conservadora FEMA 57 L", "Gran capacidad para todo el grupo"),
+     "Conservadora FEMA 57&nbsp;L", "Gran capacidad para todo el grupo"),
     ("69365405#FEMA", "Reposera<br><em>Cauchito</em>", "Descanso al aire libre, donde quieras.",
      "Reposera Cauchito FEMA", "Plegable, fácil de transportar"),
     ("69365408#FEMA", "Reposera<br><em>Emperador</em>", "Comodidad para la playa y el camping.",
      "Reposera Emperador FEMA", "Plegable, fácil de transportar"),
-    ("69380320#FEMA", "Generador<br><em>inverter 800 W</em>", "Energía silenciosa para el camping.",
-     "Generador inverter FEMA 800 W", "220 V, liviano y portátil"),
-    ("69380590#FEMA", "Estación de<br><em>energía 1000 W</em>", "Cargá todo, sin ruido ni combustible.",
+    ("69380320#FEMA", "Generador<br><em>inverter 800&nbsp;W</em>", "Energía silenciosa para el camping.",
+     "Generador inverter FEMA 800&nbsp;W", "220 V, liviano y portátil"),
+    ("69380590#FEMA", "Estación de<br><em>energía 1000&nbsp;W</em>", "Cargá todo, sin ruido ni combustible.",
      "Estación de energía recargable FEMA", "1000 W, 960 Wh. Carga solar y 12 V, salidas USB"),
 ]
 
