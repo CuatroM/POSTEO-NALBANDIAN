@@ -1,0 +1,80 @@
+/* Historias Alexis Nalbandian 1080x1920 — fondo blanco, naranja y negro. Tipografía Inter. */
+@font-face { font-family: "Texto"; src: url("fuentes/Inter-Medium.otf"); font-weight: 500; }
+@font-face { font-family: "Texto"; src: url("fuentes/Inter-SemiBold.otf"); font-weight: 600; }
+@font-face { font-family: "Texto"; src: url("fuentes/Inter-Bold.otf"); font-weight: 700; }
+@font-face { font-family: "Titular"; src: url("fuentes/InterDisplay-Bold.otf"); font-weight: 700; }
+@font-face { font-family: "Titular"; src: url("fuentes/InterDisplay-Black.otf"); font-weight: 900; }
+
+:root {
+  --naranja: #FF6B00;
+  --negro: #111111;
+  --blanco: #FFFFFF;
+  --gris-texto: #4A4A4A;
+  --linea: #E6E6E6;
+  --margen: 90px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1920px; }
+body { font-family: "Texto", sans-serif; -webkit-font-smoothing: antialiased; }
+
+.historia { position: relative; width: 1080px; height: 1920px; background: var(--blanco); color: var(--negro); overflow: hidden; }
+.historia.negra { background: var(--negro); color: var(--blanco); }
+
+/* Franja naranja lateral, marca de la línea gráfica */
+.historia::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 22px; background: var(--naranja); }
+
+/* Marca (debajo de la barra de perfil de Instagram) */
+.marca-h { position: absolute; left: var(--margen); right: var(--margen); top: 230px; display: flex; align-items: center; justify-content: space-between; }
+.marca-h .nombre { font-family: "Titular"; font-weight: 900; font-size: 40px; letter-spacing: 2px; line-height: 1; }
+.marca-h .nombre b { color: var(--naranja); font-weight: 900; }
+.marca-h .rubro { font-weight: 700; font-size: 24px; letter-spacing: 4px; color: var(--naranja); text-transform: uppercase; }
+
+.cuerpo { position: absolute; left: var(--margen); right: var(--margen); top: 360px; bottom: 360px; display: flex; flex-direction: column; }
+
+.etiqueta { align-self: flex-start; background: var(--naranja); color: var(--blanco); font-family: "Titular"; font-weight: 900; font-size: 30px; letter-spacing: 6px; padding: 12px 24px; }
+h1 { font-family: "Titular"; font-weight: 900; font-size: 140px; line-height: .95; letter-spacing: -5px; margin-top: 36px; }
+h1 em { font-style: normal; color: var(--naranja); }
+.bajada { font-weight: 600; font-size: 50px; line-height: 1.22; color: var(--gris-texto); margin-top: 40px; }
+.bajada b { color: var(--negro); font-weight: 700; }
+.historia.negra .bajada { color: #CFCFCF; }
+.historia.negra .bajada b { color: var(--blanco); }
+
+/* Íconos de los tres robots */
+.iconos { display: flex; justify-content: space-between; gap: 30px; margin-top: auto; }
+.icono { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 22px; }
+.icono .circulo { width: 250px; height: 250px; border-radius: 50%; border: 8px solid var(--negro); display: flex; align-items: center; justify-content: center; background: var(--blanco); }
+.icono .circulo svg { width: 150px; height: 150px; }
+.icono span { font-family: "Titular"; font-weight: 900; font-size: 34px; letter-spacing: 1px; text-align: center; line-height: 1.05; }
+
+/* Pie: frase sobre barra naranja, por encima de la zona de respuesta */
+.pie-h { position: absolute; left: var(--margen); right: var(--margen); bottom: 210px; min-height: 100px; background: var(--negro); color: var(--blanco); display: flex; align-items: center; padding: 0 34px; gap: 22px; font-family: "Titular"; font-weight: 700; font-size: 38px; line-height: 1.15; }
+.pie-h i { flex: none; width: 18px; height: 18px; background: var(--naranja); display: inline-block; }
+.historia.negra .pie-h { background: var(--naranja); }
+.historia.negra .pie-h i { background: var(--blanco); }
+
+/* Placas de producto */
+.categoria { font-family: "Titular"; font-weight: 900; font-size: 96px; line-height: .95; letter-spacing: -3px; }
+.categoria em { font-style: normal; color: var(--naranja); }
+.sub-cat { font-weight: 600; font-size: 38px; color: var(--gris-texto); margin-top: 18px; }
+.productos { flex: 1; display: flex; flex-direction: column; gap: 26px; margin-top: 40px; min-height: 0; }
+.producto { flex: 1; min-height: 0; display: flex; gap: 30px; align-items: stretch; border: 4px solid var(--negro); background: var(--blanco); position: relative; }
+.producto .foto { flex: 0 0 46%; display: flex; align-items: center; justify-content: center; padding: 22px; }
+.producto .foto img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.producto .datos { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 22px 30px 22px 0; }
+.producto .nombre { font-family: "Titular"; font-weight: 900; font-size: 42px; line-height: 1.05; letter-spacing: -1px; }
+.producto .detalle { font-weight: 600; font-size: 28px; color: var(--gris-texto); margin-top: 10px; line-height: 1.2; }
+.producto .precio { font-family: "Titular"; font-weight: 900; font-size: 74px; color: var(--naranja); letter-spacing: -2px; line-height: 1; margin-top: 18px; }
+.producto .envio { align-self: flex-start; margin-top: 14px; background: var(--negro); color: var(--blanco); font-weight: 700; font-size: 24px; letter-spacing: 3px; padding: 8px 14px; }
+/* Una sola tarjeta: foto arriba grande */
+.productos.uno .producto { flex-direction: column; }
+.productos.uno .producto .foto { flex: 1; min-height: 0; padding: 40px; }
+.productos.uno .producto .datos { flex: none; padding: 0 40px 40px; }
+.productos.uno .producto .nombre { font-size: 56px; }
+.productos.uno .producto .precio { font-size: 110px; }
+
+/* Cierre: contacto */
+.contacto { margin-top: auto; border: 4px solid var(--negro); padding: 40px 44px; }
+.contacto .titulo-c { font-family: "Titular"; font-weight: 900; font-size: 44px; display: flex; align-items: center; gap: 18px; }
+.contacto .titulo-c svg { width: 56px; height: 56px; flex: none; }
+.contacto .numeros { display: flex; flex-direction: column; gap: 6px; margin-top: 22px; }
+.contacto .numeros b { font-family: "Titular"; font-weight: 900; font-size: 92px; letter-spacing: -2px; line-height: 1.05; color: var(--naranja); }
