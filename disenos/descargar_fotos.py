@@ -34,6 +34,19 @@ def norm(s):
 def encontrar(sku, consulta):
     if consulta.strip().lower() == "drive":     # "SKU | drive" = buscar directo en Drive
         return encontrar_drive(sku)
+    if consulta.strip().lower().startswith("http"):  # "SKU | link de la página del producto en femacba"
+        try:
+            pag = _get(consulta.strip())
+        except Exception as ex:  # noqa: BLE001
+            print(f"  {consulta}: error {ex}")
+        else:
+            hallado = _desde_listado(sku, pag) if sku in pag else None
+            img = _og_image(pag)
+            if hallado:
+                return hallado
+            if img and "logo" not in img.lower():
+                print(f"  página del producto -> {img}")
+                return "femacba (página)", {"name": consulta.strip()}, _abs(img)
     for sitio in SITIOS:
         for termino in [sku] + ([consulta] if consulta else []):
             try:
@@ -124,6 +137,12 @@ PAGINAS_HTML = [
     "https://www.femacba.com.ar/electrobombas/electrobombas-centrifugas-y-perifericas",
     "https://www.femacba.com.ar/jardineria/canos-mangueras-de-riego",
     "https://www.femacba.com.ar/listado-productos.htm",
+    "https://www.femacba.com.ar/jardineria/cortacesped",
+    "https://www.femacba.com.ar/jardineria",
+    "https://www.femacba.com.ar/electrobombas/electrobombas-sumergibles-monofasicas",
+    "https://www.femacba.com.ar/electrobombas",
+    "https://www.femacba.com.ar/hogar",
+    "https://www.femacba.com.ar/limpieza",
 ] + [f"https://www.femacba.com.ar/compresores/compresores-1?{k}={n}" for k in ("page", "pagina", "p") for n in range(2, 6)]
 
 
@@ -153,10 +172,22 @@ def _desde_listado(sku, txt):
     """En un listado que muestra el SKU, toma la foto y el link más cercanos al código."""
     # 0) una imagen cuyo nombre lleva el SKU (en TiendaQuick: .../thumb_03_<SKU>-1.jpg.webp -> versión grande)
     directas = re.findall(r'["\'(]([^"\'()\s]*?' + re.escape(sku) + r'[^"\'()\s]*?\.(?:jpe?g|png|webp))', txt, re.I)
-    if directas:
-        img = _abs(re.sub(r"thumb_\d+_", "", directas[0]))
-        print(f"  imagen con el SKU en el nombre -> {img}")
-        return "femacba (listado)", {"name": sku}, img
+    probadas = []
+    for d in directas:
+        for v in (re.sub(r"thumb_\d+_", "", d), d, re.sub(r"(thumb_\d+_|wd_)", "", d)):
+            img = _abs(v)
+            if img in probadas:
+                continue
+            probadas.append(img)
+            try:
+                ok = requests.get(img, headers=UA, timeout=40).status_code == 200
+            except Exception:  # noqa: BLE001
+                ok = False
+            if ok:
+                print(f"  imagen con el SKU en el nombre -> {img}")
+                return "femacba (listado)", {"name": sku}, img
+    if probadas:
+        print(f"  imágenes con el SKU que no responden: {probadas[:6]}")
     i = txt.find(sku)
     ventana_antes, ventana_despues = txt[max(0, i - 4000):i], txt[i:i + 1500]
     imgs = [m for m in re.findall(r'<img[^>]+(?:data-src|src)=["\']([^"\']+)', ventana_antes)

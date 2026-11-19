@@ -1,8 +1,6 @@
-# Un SKU por línea (opcional: "SKU | texto de búsqueda"). Las fotos quedan en disenos/productos/<SKU>.jpg
-69383235 | drive
-69383238 | drive
+# Un SKU por línea. Opcional: "SKU | drive" (Drive de FEMA, y si no está, la web), "SKU | link de femacba" o "SKU | texto".
+# Las fotos quedan en disenos/productos/<SKU>.jpg
 69383243 | drive
 69383810 | drive
 69606708 | drive
-69606710 | drive
-69606713 | drive
+69606710 | https://www.femacba.com.ar/electrobombas/electrobombas-sumergibles-monofasicas/robot-limpiador-piletas.html
