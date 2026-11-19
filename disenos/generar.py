@@ -73,11 +73,12 @@ def iconos(items):
 def tarjeta(p):
     """p: dict con sku, nombre, detalle (opcional), costo (o precio fijo)."""
     img = foto(p["sku"])
-    precio = p.get("precio") or precio_envio_gratis(p["costo"])
+    precio = None if p.get("precio_pendiente") else (p.get("precio") or precio_envio_gratis(p["costo"]))
     return (f'<div class="producto"><div class="foto">{f"<img src={chr(34)}{img}{chr(34)}>" if img else "<div class=pendiente>FOTO<br>PENDIENTE</div>"}</div>'
             f'<div class="datos"><div class="nombre">{p["nombre"]}</div>'
             + (f'<div class="detalle">{p["detalle"]}</div>' if p.get("detalle") else "")
-            + f'<div class="precio">{pesos(precio)}</div><div class="envio">ENVÍO GRATIS</div></div></div>')
+            + (f'<div class="precio">{pesos(precio)}</div>' if precio else '<div class="precio pend">PRECIO A CONFIRMAR</div>')
+            + f'<div class="envio">ENVÍO GRATIS</div></div></div>')
 
 
 def productos(lista):

@@ -91,3 +91,4 @@ h1 em { font-style: normal; color: var(--naranja); }
 .productos:not(.uno) .producto .precio { font-size: 62px; margin-top: 10px; }
 .productos:not(.uno) .producto .envio { font-size: 20px; margin-top: 10px; padding: 6px 12px; }
 .productos:not(.uno) .producto .foto { flex-basis: 42%; padding: 14px; }
+.precio.pend { font-size: 40px !important; color: #B5B5B5; letter-spacing: 1px; }

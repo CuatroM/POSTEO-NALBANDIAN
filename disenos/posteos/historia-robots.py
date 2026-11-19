@@ -8,9 +8,7 @@ CARPETA = ""  # se completa al tener los productos definitivos, p. ej. "2026-11-
 # Productos por grupo: (sku, nombre comercial, detalle). El costo sale de la base.
 GRUPOS = {
     "cortacesped": [
-        ("69383235#FEMA", "Robot cortacésped FR35", "Para jardines de hasta 800 m²"),
-        ("69383238#FEMA", "Robot cortacésped FR55", "Para jardines de hasta 1.600 m²"),
-        ("69383243#FEMA", "Robot cortacésped FR100", "Hasta 10.000 m². 3 en 1, con batería y cargador 20 V"),
+        ("69383247#FEMA", "Robot cortacésped FEMA con cámara", "Sin cable perimetral: navega con cámara e IA, control por app Wi-Fi. Batería 5 Ah"),
     ],
     "aspiradora": [
         ("69383810#FEMA", "Robot aspiradora FEMA", "Aspira sola toda la casa"),
@@ -21,8 +19,7 @@ GRUPOS = {
         ("69606713#FEMA", "Robot limpiador de superficie QT200", "Limpia la superficie del agua"),
     ],
 }
-# El stock de los cortacésped en BaseLinker está en 0 (export 19/11): se muestran igual hasta que se decida.
-SIN_STOCK_PERMITIDO = {"cortacesped"}
+SIN_STOCK_PERMITIDO = set()
 
 
 def lista(g, grupo):
@@ -31,7 +28,8 @@ def lista(g, grupo):
     for sku, nombre, detalle in GRUPOS[grupo]:
         b = base.get(sku)
         if not b:
-            print(f"  {sku}: no está en la base, no se usa")
+            print(f"  {sku}: NO ESTÁ EN LA BASE (sin costo): queda con precio a confirmar")
+            filas.append({"sku": sku, "nombre": nombre, "detalle": detalle, "precio_pendiente": True})
             continue
         if float(b["stock"] or 0) <= 0 and grupo not in SIN_STOCK_PERMITIDO:
             print(f"  {sku}: sin stock, no se usa")
