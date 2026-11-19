@@ -1,11 +1,8 @@
-69383247:
-  imagen con el SKU en el nombre -> https://www.femacba.com.ar/mods/html/fil/Model/Product/25426/693832473691-1.jpg
-  OK 69383247 (femacba (listado)) -> 69383247.jpg [47 KB]
 69383810:
-  Drive: 2828 archivos en la carpeta de fotos
-  Drive: no hay foto para 69383810
   https://femacba.com.ar '69383810': error 410 Client Error: Gone for url: https://femacba.com.ar/wp-json/wc/store/v1/products?search=69383810&per_page=50
+  https://femacba.com.ar 'aspiradora robot': error 410 Client Error: Gone for url: https://femacba.com.ar/wp-json/wc/store/v1/products?search=aspiradora+robot&per_page=50
   https://www.femacba.com.ar/?s=69383810: 179 links; SKU en la página: False
+  https://www.femacba.com.ar/?s=aspiradora%20robot: 179 links; SKU en la página: False
   https://www.femacba.com.ar/construccion/hormigoneras-carretillas-baldes: 187 links; SKU en la página: False
   https://www.femacba.com.ar/compresores/compresores-1: 191 links; SKU en la página: False
   https://www.femacba.com.ar/compresores: 182 links; SKU en la página: False
@@ -27,6 +24,7 @@
   https://www.femacba.com.ar/compresores/compresores-1?p=3: 191 links; SKU en la página: False
   https://www.femacba.com.ar/compresores/compresores-1?p=4: 191 links; SKU en la página: False
   https://www.femacba.com.ar/compresores/compresores-1?p=5: 191 links; SKU en la página: False
+  Drive: 2828 archivos en la carpeta de fotos
   Drive: no hay foto para 69383810
   NO ENCONTRADO
 Sin foto: 69383810
