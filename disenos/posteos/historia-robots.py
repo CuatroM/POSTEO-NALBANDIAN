@@ -22,6 +22,8 @@ PLACAS = [
 # Costos que todavía no están en la base de BaseLinker (informados a mano)
 COSTOS_MANUALES = {"69383247#FEMA": 1324998.40}
 
+ENVIO = "ENVÍO GRATIS POR TRANSPORTE CREDIFIN"
+
 
 def producto(g, sku, nombre, detalle):
     b = g.base().get(sku)
@@ -31,8 +33,8 @@ def producto(g, sku, nombre, detalle):
     if not g.foto(sku):
         print(f"  ATENCIÓN {sku}: sin foto")
     if not costo:
-        return {"sku": sku, "nombre": nombre, "detalle": detalle, "precio_pendiente": True}
-    return {"sku": sku, "nombre": nombre, "detalle": detalle, "costo": costo}
+        return {"sku": sku, "nombre": nombre, "detalle": detalle, "precio_pendiente": True, "envio": ENVIO}
+    return {"sku": sku, "nombre": nombre, "detalle": detalle, "costo": costo, "envio": ENVIO}
 
 
 def placas(g):

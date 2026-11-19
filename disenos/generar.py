@@ -101,7 +101,7 @@ def tarjeta(p):
             f'<div class="datos"><div class="nombre">{p["nombre"]}</div>'
             + (f'<div class="detalle">{p["detalle"]}</div>' if p.get("detalle") else "")
             + (f'<div class="precio">{pesos(precio)}</div>' if precio else '<div class="precio pend">PRECIO A CONFIRMAR</div>')
-            + f'<div class="envio">ENVÍO GRATIS</div></div></div>')
+            + f'<div class="envio">{p.get("envio", "ENVÍO GRATIS")}</div></div></div>')
 
 
 def productos(lista):
