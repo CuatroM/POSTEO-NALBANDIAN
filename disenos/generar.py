@@ -127,7 +127,6 @@ def marco(cuerpo, pie="", fondo="", rubro="Robots FEMA", semilla=1):
     return f'''<!doctype html><html><head><meta charset="utf-8"><meta name="tamano" content="1080x1920">
 <link rel="stylesheet" href="../../historia.css"></head>
 <body><div class="historia {fondo}">
-{graffiti(semilla)}
 <div class="marca-h"><div class="nombre">ALEXIS <b>NALBANDIAN</b></div><div class="rubro">{e(rubro)}</div></div>
 <div class="cuerpo">{cuerpo}</div>
 {pie_html}
