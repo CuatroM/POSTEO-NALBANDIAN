@@ -82,3 +82,12 @@ h1 em { font-style: normal; color: var(--naranja); }
 /* Fondo: marcas sutiles de graffiti/spray en gris claro (no protagonista) */
 .graffiti { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
 .marca-h, .cuerpo, .pie-h { z-index: 1; }
+.pendiente { font-family: "Titular"; font-weight: 900; font-size: 34px; letter-spacing: 3px; color: #B5B5B5; text-align: center; border: 4px dashed #CFCFCF; padding: 40px 30px; }
+
+/* Tres tarjetas por placa: tamaños que entran sin cortarse */
+.productos:not(.uno) .producto .datos { padding: 16px 24px 16px 0; }
+.productos:not(.uno) .producto .nombre { font-size: 36px; }
+.productos:not(.uno) .producto .detalle { font-size: 24px; margin-top: 6px; }
+.productos:not(.uno) .producto .precio { font-size: 62px; margin-top: 10px; }
+.productos:not(.uno) .producto .envio { font-size: 20px; margin-top: 10px; padding: 6px 12px; }
+.productos:not(.uno) .producto .foto { flex-basis: 42%; padding: 14px; }

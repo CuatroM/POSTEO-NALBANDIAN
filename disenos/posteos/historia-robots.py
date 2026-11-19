@@ -37,8 +37,7 @@ def lista(g, grupo):
             print(f"  {sku}: sin stock, no se usa")
             continue
         if not g.foto(sku):
-            print(f"  {sku}: sin foto, no se usa")
-            continue
+            print(f"  {sku}: SIN FOTO (queda marcado como pendiente)")
         filas.append({"sku": sku, "nombre": nombre, "detalle": detalle, "costo": b["costo"]})
     return filas
 
