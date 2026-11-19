@@ -53,7 +53,7 @@ def placas(g):
         '<h1 style="font-size:124px">Los <em>robots<br>FEMA</em><br>ya están acá</h1>'
         '<div class="bajada">Que el pasto, la casa y la pileta<br>se hagan solos. <b>Vos solo disfrutá.</b></div>'
         f'<div class="contacto"><div class="titulo-c">{g.svg("whatsapp")}Consultanos por WhatsApp</div>'
-        '<div class="numeros"><b>351 547 8486</b><b>3541 618395</b></div></div>',
+        '<div class="numeros"><b>3515478486</b><b>3541618395</b></div></div>',
         pie="6 meses de garantía, servicio técnico<br>y envíos a todo el país.")
 
     return [apertura, *productos, cierre]
