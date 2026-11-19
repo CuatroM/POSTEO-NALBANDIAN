@@ -43,12 +43,35 @@ def base():
         return {f["sku"]: f for f in csv.DictReader(fh, delimiter=";")}
 
 
+RECORTES = AQUI / "salida" / "_recortes"
+
+
+def _recortar(p):
+    """Copia de la foto sin el margen blanco/transparente, para que el producto ocupe la caja."""
+    from PIL import Image, ImageChops
+    RECORTES.mkdir(parents=True, exist_ok=True)
+    out = RECORTES / (p.stem + ".png")
+    if out.exists() and out.stat().st_mtime >= p.stat().st_mtime:
+        return out
+    im = Image.open(p).convert("RGBA")
+    fondo = Image.new("RGBA", im.size, (255, 255, 255, 255))
+    plano = Image.alpha_composite(fondo, im).convert("RGB")
+    dif = ImageChops.difference(plano, Image.new("RGB", im.size, (255, 255, 255))).convert("L")
+    caja = dif.point(lambda v: 255 if v > 18 else 0).getbbox()
+    if caja:
+        m = 8
+        caja = (max(caja[0] - m, 0), max(caja[1] - m, 0), min(caja[2] + m, im.width), min(caja[3] + m, im.height))
+        plano = plano.crop(caja)
+    plano.save(out)
+    return out
+
+
 def foto(sku):
     for n in (sku, sku.split("#")[0]):
         for ext in ("png", "jpg", "jpeg", "webp"):
             p = PRODUCTOS / f"{n}.{ext}"
             if p.exists():
-                return f"../../productos/{p.name}"
+                return f"../_recortes/{_recortar(p).name}"
     return None
 
 
@@ -128,7 +151,7 @@ def marco(cuerpo, pie="", fondo="", rubro="Robots FEMA", semilla=1):
 <link rel="stylesheet" href="../../historia.css"></head>
 <body><div class="historia {fondo}">
 <div class="marca-h"><div class="nombre">ALEXIS <b>NALBANDIAN</b></div><div class="rubro">{e(rubro)}</div></div>
-<div class="cuerpo">{cuerpo}</div>
+<div class="cuerpo{"" if pie else " sin-pie"}">{cuerpo}</div>
 {pie_html}
 </div></body></html>'''
 
