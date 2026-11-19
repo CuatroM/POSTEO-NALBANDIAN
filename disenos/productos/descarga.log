@@ -1,17 +1,5 @@
-69383235:
-  Drive: 2828 archivos en la carpeta de fotos
-  Drive: no hay foto para 69383235
-  https://femacba.com.ar '69383235': error 410 Client Error: Gone for url: https://femacba.com.ar/wp-json/wc/store/v1/products?search=69383235&per_page=50
-  https://www.femacba.com.ar/?s=69383235: 179 links; SKU en la página: False
-  imagen con el SKU en el nombre -> https://www.femacba.com.ar/mods/html/fil/Model/Product/21898/69383235-69383238-24489-1.jpeg
-  OK 69383235 (femacba (listado)) -> 69383235.jpeg [71 KB]
-69383238:
-  Drive: no hay foto para 69383238
-  https://femacba.com.ar '69383238': error 410 Client Error: Gone for url: https://femacba.com.ar/wp-json/wc/store/v1/products?search=69383238&per_page=50
-  https://www.femacba.com.ar/?s=69383238: 179 links; SKU en la página: False
-  imagen con el SKU en el nombre -> https://www.femacba.com.ar/mods/html/fil/Model/Product/21898/69383235-69383238-24489-1.jpeg
-  OK 69383238 (femacba (listado)) -> 69383238.jpeg [71 KB]
 69383243:
+  Drive: 2828 archivos en la carpeta de fotos
   Drive: no hay foto para 69383243
   https://femacba.com.ar '69383243': error 410 Client Error: Gone for url: https://femacba.com.ar/wp-json/wc/store/v1/products?search=69383243&per_page=50
   https://www.femacba.com.ar/?s=69383243: 179 links; SKU en la página: False
@@ -22,6 +10,12 @@
   https://www.femacba.com.ar/electrobombas/electrobombas-centrifugas-y-perifericas: 187 links; SKU en la página: False
   https://www.femacba.com.ar/jardineria/canos-mangueras-de-riego: 191 links; SKU en la página: False
   https://www.femacba.com.ar/listado-productos.htm: 182 links; SKU en la página: False
+  https://www.femacba.com.ar/jardineria/cortacesped: 187 links; SKU en la página: False
+  https://www.femacba.com.ar/jardineria: 182 links; SKU en la página: False
+  https://www.femacba.com.ar/electrobombas/electrobombas-sumergibles-monofasicas: 189 links; SKU en la página: False
+  https://www.femacba.com.ar/electrobombas: 182 links; SKU en la página: False
+  https://www.femacba.com.ar/hogar: error 404 Client Error: Not Found for url: https://www.femacba.com.ar/hogar
+  https://www.femacba.com.ar/limpieza: 182 links; SKU en la página: False
   https://www.femacba.com.ar/compresores/compresores-1?pagina=2: 191 links; SKU en la página: False
   https://www.femacba.com.ar/compresores/compresores-1?pagina=3: 191 links; SKU en la página: False
   https://www.femacba.com.ar/compresores/compresores-1?pagina=4: 191 links; SKU en la página: False
@@ -43,6 +37,12 @@
   https://www.femacba.com.ar/electrobombas/electrobombas-centrifugas-y-perifericas: 187 links; SKU en la página: False
   https://www.femacba.com.ar/jardineria/canos-mangueras-de-riego: 191 links; SKU en la página: False
   https://www.femacba.com.ar/listado-productos.htm: 182 links; SKU en la página: False
+  https://www.femacba.com.ar/jardineria/cortacesped: 187 links; SKU en la página: False
+  https://www.femacba.com.ar/jardineria: 182 links; SKU en la página: False
+  https://www.femacba.com.ar/electrobombas/electrobombas-sumergibles-monofasicas: 189 links; SKU en la página: False
+  https://www.femacba.com.ar/electrobombas: 182 links; SKU en la página: False
+  https://www.femacba.com.ar/hogar: error 404 Client Error: Not Found for url: https://www.femacba.com.ar/hogar
+  https://www.femacba.com.ar/limpieza: 182 links; SKU en la página: False
   https://www.femacba.com.ar/compresores/compresores-1?pagina=2: 191 links; SKU en la página: False
   https://www.femacba.com.ar/compresores/compresores-1?pagina=3: 191 links; SKU en la página: False
   https://www.femacba.com.ar/compresores/compresores-1?pagina=4: 191 links; SKU en la página: False
@@ -65,30 +65,15 @@
   https://www.femacba.com.ar/electrobombas/electrobombas-centrifugas-y-perifericas: 187 links; SKU en la página: False
   https://www.femacba.com.ar/jardineria/canos-mangueras-de-riego: 191 links; SKU en la página: False
   https://www.femacba.com.ar/listado-productos.htm: 182 links; SKU en la página: False
-  https://www.femacba.com.ar/compresores/compresores-1?pagina=2: 191 links; SKU en la página: False
-  https://www.femacba.com.ar/compresores/compresores-1?pagina=3: 191 links; SKU en la página: False
-  https://www.femacba.com.ar/compresores/compresores-1?pagina=4: 191 links; SKU en la página: False
-  https://www.femacba.com.ar/compresores/compresores-1?pagina=5: 191 links; SKU en la página: False
-  https://www.femacba.com.ar/compresores/compresores-1?p=2: 191 links; SKU en la página: False
-  https://www.femacba.com.ar/compresores/compresores-1?p=3: 191 links; SKU en la página: False
-  https://www.femacba.com.ar/compresores/compresores-1?p=4: 191 links; SKU en la página: False
-  https://www.femacba.com.ar/compresores/compresores-1?p=5: 191 links; SKU en la página: False
-  Drive: no hay foto para 69606708
-  Drive: nombres parecidos: 69606789.png, 69606790 (2).png, 69606790 (4).png, 69606790.jpg, 69606790.png, 69606792 (3).png, 69606792(2).png, 69606792.jpg, 69606797.png, 69606799 (5).jpg, 69606799.png
-  NO ENCONTRADO
+  https://www.femacba.com.ar/jardineria/cortacesped: 187 links; SKU en la página: False
+  https://www.femacba.com.ar/jardineria: 182 links; SKU en la página: False
+  https://www.femacba.com.ar/electrobombas/electrobombas-sumergibles-monofasicas: 189 links; SKU en la página: False
+  https://www.femacba.com.ar/electrobombas: 182 links; SKU en la página: False
+  https://www.femacba.com.ar/hogar: error 404 Client Error: Not Found for url: https://www.femacba.com.ar/hogar
+  https://www.femacba.com.ar/limpieza: 182 links; SKU en la página: True
+  imagen con el SKU en el nombre -> https://www.femacba.com.ar/mods/html/fil/Model/Product/21894/69606708-25555-1.jpg
+  OK 69606708 (femacba (listado)) -> 69606708.jpg [98 KB]
 69606710:
-  Drive: no hay foto para 69606710
-  Drive: nombres parecidos: 69606789.png, 69606790 (2).png, 69606790 (4).png, 69606790.jpg, 69606790.png, 69606792 (3).png, 69606792(2).png, 69606792.jpg, 69606797.png, 69606799 (5).jpg, 69606799.png
-  https://femacba.com.ar '69606710': error 410 Client Error: Gone for url: https://femacba.com.ar/wp-json/wc/store/v1/products?search=69606710&per_page=50
-  https://www.femacba.com.ar/?s=69606710: 179 links; SKU en la página: True
-  imagen con el SKU en el nombre -> https://www.femacba.com.ar/mods/html/fil/Model/Product/21566/wd_69606710-2-1.jpg
-  no se pudo bajar https://www.femacba.com.ar/mods/html/fil/Model/Product/21566/wd_69606710-2-1.jpg (404 Client Error: Not Found for url: https://www.femacba.com.ar/mods/html/fil/Model/Product/21566/wd_69606710-2-1.jpg); pruebo en Drive
-  NO ENCONTRADO
-69606713:
-  Drive: no hay foto para 69606713
-  Drive: nombres parecidos: 69606789.png, 69606790 (2).png, 69606790 (4).png, 69606790.jpg, 69606790.png, 69606792 (3).png, 69606792(2).png, 69606792.jpg, 69606797.png, 69606799 (5).jpg, 69606799.png
-  https://femacba.com.ar '69606713': error 410 Client Error: Gone for url: https://femacba.com.ar/wp-json/wc/store/v1/products?search=69606713&per_page=50
-  https://www.femacba.com.ar/?s=69606713: 179 links; SKU en la página: False
-  imagen con el SKU en el nombre -> https://www.femacba.com.ar/mods/html/fil/Model/Product/21895/696067130706-1.jpeg
-  OK 69606713 (femacba (listado)) -> 69606713.jpeg [91 KB]
-Sin foto: 69383243, 69383810, 69606708, 69606710
+  imagen con el SKU en el nombre -> https://www.femacba.com.ar/mods/html/fil/Model/Product/21566/69606710-2-1.jpg
+  OK 69606710 (femacba (listado)) -> 69606710.jpg [217 KB]
+Sin foto: 69383243, 69383810
