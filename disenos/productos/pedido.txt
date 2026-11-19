@@ -1,2 +1,7 @@
-# Un SKU por línea. Opcional: "SKU | drive", "SKU | link de femacba" o "SKU | texto".
-69383810 | aspiradora robot
+# Un SKU por línea. Opcional: "SKU | drive" (Drive de FEMA, y si no está, la web), "SKU | link de femacba" o "SKU | texto".
+69606739 | drive
+69606743 | drive
+69365405 | drive
+69365408 | drive
+69380320 | drive
+69380590 | drive
