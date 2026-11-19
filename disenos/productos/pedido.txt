@@ -1,4 +1,2 @@
-# Un SKU por línea. Opcional: "SKU | drive" (Drive de FEMA, y si no está, la web), "SKU | link de femacba" o "SKU | texto".
-# Las fotos quedan en disenos/productos/<SKU>.jpg
-69383247 | https://www.femacba.com.ar/jardineria/cortacesped/cortadora-cesped-robot-fema-c-camara-bateria-5ha.html
-69383810 | drive
+# Un SKU por línea. Opcional: "SKU | drive", "SKU | link de femacba" o "SKU | texto".
+69383810 | aspiradora robot
