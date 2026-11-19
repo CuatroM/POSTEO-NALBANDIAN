@@ -144,6 +144,8 @@ def _abs(u):
         return "https:" + u
     if u.startswith("/"):
         return "https://www.femacba.com.ar" + u
+    if not u.startswith("http"):  # relativo, p. ej. "mods/html/fil/..."
+        return "https://www.femacba.com.ar/" + u
     return u
 
 

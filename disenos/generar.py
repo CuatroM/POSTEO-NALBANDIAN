@@ -84,11 +84,49 @@ def productos(lista):
     return f'<div class="productos{" uno" if len(lista) == 1 else ""}">' + "".join(tarjeta(p) for p in lista) + "</div>"
 
 
-def marco(cuerpo, pie="", fondo="", rubro="Equipos FEMA"):
+import random
+
+
+def graffiti(semilla=1):
+    """Marcas de spray en gris claro: trazos difuminados, chorreaduras y salpicaduras en los bordes."""
+    r = random.Random(semilla)
+    g = ['<svg class="graffiti" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">'
+         '<defs><filter id="spray" x="-20%" y="-20%" width="140%" height="140%">'
+         '<feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" result="r"/>'
+         '<feDisplacementMap in="SourceGraphic" in2="r" scale="14"/><feGaussianBlur stdDeviation="2.2"/></filter>'
+         '<filter id="niebla"><feGaussianBlur stdDeviation="18"/></filter></defs>']
+    # zonas: esquinas y bordes, lejos del centro del texto
+    zonas = [(80, 330, 1000, 520), (40, 1150, 520, 1700), (640, 1380, 1060, 1760), (700, 120, 1060, 360)]
+    for k, (x0, y0, x1, y1) in enumerate(r.sample(zonas, 3)):
+        cx, cy = r.uniform(x0, x1), r.uniform(y0, y1)
+        g.append(f'<ellipse cx="{cx:.0f}" cy="{cy:.0f}" rx="{r.uniform(120, 220):.0f}" ry="{r.uniform(50, 110):.0f}" '
+                 f'fill="#D9D9D9" opacity=".35" filter="url(#niebla)"/>')
+        # trazo tipo tag
+        pts = [(cx + r.uniform(-260, 260), cy + r.uniform(-90, 90)) for _ in range(4)]
+        d = f"M{pts[0][0]:.0f} {pts[0][1]:.0f} C" + " ".join(f"{x:.0f} {y:.0f}" for x, y in pts[1:])
+        g.append(f'<path d="{d}" fill="none" stroke="#CFCFCF" stroke-width="{r.uniform(22, 38):.0f}" '
+                 f'stroke-linecap="round" opacity=".45" filter="url(#spray)"/>')
+        # chorreaduras
+        for _ in range(r.randint(2, 4)):
+            x = r.uniform(min(p[0] for p in pts), max(p[0] for p in pts))
+            y = cy + r.uniform(-20, 40)
+            largo = r.uniform(60, 180)
+            g.append(f'<path d="M{x:.0f} {y:.0f} v{largo:.0f}" stroke="#CFCFCF" stroke-width="{r.uniform(5, 9):.0f}" '
+                     f'stroke-linecap="round" opacity=".45"/><circle cx="{x:.0f}" cy="{y + largo:.0f}" r="7" fill="#CFCFCF" opacity=".45"/>')
+        # salpicaduras
+        for _ in range(r.randint(25, 45)):
+            g.append(f'<circle cx="{cx + r.gauss(0, 150):.0f}" cy="{cy + r.gauss(0, 90):.0f}" '
+                     f'r="{r.uniform(1.5, 6):.1f}" fill="#C8C8C8" opacity="{r.uniform(.25, .55):.2f}"/>')
+    g.append("</svg>")
+    return "".join(g)
+
+
+def marco(cuerpo, pie="", fondo="", rubro="Robots FEMA", semilla=1):
     pie_html = f'<div class="pie-h"><i></i><span>{pie}</span></div>' if pie else ""
     return f'''<!doctype html><html><head><meta charset="utf-8"><meta name="tamano" content="1080x1920">
 <link rel="stylesheet" href="../../historia.css"></head>
 <body><div class="historia {fondo}">
+{graffiti(semilla)}
 <div class="marca-h"><div class="nombre">ALEXIS <b>NALBANDIAN</b></div><div class="rubro">{e(rubro)}</div></div>
 <div class="cuerpo">{cuerpo}</div>
 {pie_html}

@@ -78,3 +78,7 @@ h1 em { font-style: normal; color: var(--naranja); }
 .contacto .titulo-c svg { width: 56px; height: 56px; flex: none; }
 .contacto .numeros { display: flex; flex-direction: column; gap: 6px; margin-top: 22px; }
 .contacto .numeros b { font-family: "Titular"; font-weight: 900; font-size: 92px; letter-spacing: -2px; line-height: 1.05; color: var(--naranja); }
+
+/* Fondo: marcas sutiles de graffiti/spray en gris claro (no protagonista) */
+.graffiti { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.marca-h, .cuerpo, .pie-h { z-index: 1; }
