@@ -1,25 +1,8 @@
-69606789:
-  Drive: 2828 archivos en la carpeta de fotos
-  Drive: candidatos ['69606789.png']
-  Drive: 69606789.png
-  OK 69606789.png (drive) -> 69606789.png [2198 KB]
-69606790:
-  Drive: candidatos ['69606790 (2).png', '69606790 (4).png', '69606790.jpg', '69606790.png']
-  Drive: 69606790.jpg
-  OK 69606790.jpg (drive) -> 69606790.jpg [131 KB]
-69606792:
-  Drive: candidatos ['69606792 (3).png', '69606792.jpg']
-  Drive: 69606792.jpg
-  OK 69606792.jpg (drive) -> 69606792.jpg [3414 KB]
-69606799:
-  Drive: candidatos ['69606799 (5).jpg', '69606799.png']
-  Drive: 69606799.png
-  OK 69606799.png (drive) -> 69606799.png [1853 KB]
 69606775:
-  Drive: no hay foto para 69606775
-  Drive: nombres parecidos: 69606789.png, 69606790 (2).png, 69606790 (4).png, 69606790.jpg, 69606790.png, 69606792 (3).png, 69606792(2).png, 69606792.jpg, 69606797.png, 69606799 (5).jpg, 69606799.png
   https://femacba.com.ar '69606775': error 410 Client Error: Gone for url: https://femacba.com.ar/wp-json/wc/store/v1/products?search=69606775&per_page=50
+  https://femacba.com.ar 'botella termica': error 410 Client Error: Gone for url: https://femacba.com.ar/wp-json/wc/store/v1/products?search=botella+termica&per_page=50
   https://www.femacba.com.ar/?s=69606775: 179 links; SKU en la página: False
+  https://www.femacba.com.ar/?s=botella%20termica: 179 links; SKU en la página: False
   https://www.femacba.com.ar/construccion/hormigoneras-carretillas-baldes: 187 links; SKU en la página: False
   https://www.femacba.com.ar/compresores/compresores-1: 191 links; SKU en la página: False
   https://www.femacba.com.ar/compresores: 182 links; SKU en la página: False
@@ -46,11 +29,8 @@
   https://www.femacba.com.ar/compresores/compresores-1?p=3: 191 links; SKU en la página: False
   https://www.femacba.com.ar/compresores/compresores-1?p=4: 191 links; SKU en la página: False
   https://www.femacba.com.ar/compresores/compresores-1?p=5: 191 links; SKU en la página: False
+  Drive: 2828 archivos en la carpeta de fotos
   Drive: no hay foto para 69606775
   Drive: nombres parecidos: 69606789.png, 69606790 (2).png, 69606790 (4).png, 69606790.jpg, 69606790.png, 69606792 (3).png, 69606792(2).png, 69606792.jpg, 69606797.png, 69606799 (5).jpg, 69606799.png
   NO ENCONTRADO
-69606797:
-  Drive: candidatos ['69606797.png']
-  Drive: 69606797.png
-  OK 69606797.png (drive) -> 69606797.png [2267 KB]
 Sin foto: 69606775
