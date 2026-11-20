@@ -1,9 +1,25 @@
-69365405:
+69606789:
   Drive: 2828 archivos en la carpeta de fotos
-  Drive: no hay foto para 69365405
-  Drive: nombres parecidos: 69365417.jpg, 69365417_1.jpg, 69365417_2.jpg, 69365417_3.jpg, 69365417_4.jpg, 69365417_5.jpg, 69365417_6.jpg, 69365417_7.jpg, 69365417_8.jpg, 69365417_9.jpg, 69365417_medidas.jpeg, 69365425.jpg, 69365425_1.jpg, 69365425_3.jpg, 69365425_4.jpg
-  https://femacba.com.ar '69365405': error 410 Client Error: Gone for url: https://femacba.com.ar/wp-json/wc/store/v1/products?search=69365405&per_page=50
-  https://www.femacba.com.ar/?s=69365405: 179 links; SKU en la página: False
+  Drive: candidatos ['69606789.png']
+  Drive: 69606789.png
+  OK 69606789.png (drive) -> 69606789.png [2198 KB]
+69606790:
+  Drive: candidatos ['69606790 (2).png', '69606790 (4).png', '69606790.jpg', '69606790.png']
+  Drive: 69606790.jpg
+  OK 69606790.jpg (drive) -> 69606790.jpg [131 KB]
+69606792:
+  Drive: candidatos ['69606792 (3).png', '69606792.jpg']
+  Drive: 69606792.jpg
+  OK 69606792.jpg (drive) -> 69606792.jpg [3414 KB]
+69606799:
+  Drive: candidatos ['69606799 (5).jpg', '69606799.png']
+  Drive: 69606799.png
+  OK 69606799.png (drive) -> 69606799.png [1853 KB]
+69606775:
+  Drive: no hay foto para 69606775
+  Drive: nombres parecidos: 69606789.png, 69606790 (2).png, 69606790 (4).png, 69606790.jpg, 69606790.png, 69606792 (3).png, 69606792(2).png, 69606792.jpg, 69606797.png, 69606799 (5).jpg, 69606799.png
+  https://femacba.com.ar '69606775': error 410 Client Error: Gone for url: https://femacba.com.ar/wp-json/wc/store/v1/products?search=69606775&per_page=50
+  https://www.femacba.com.ar/?s=69606775: 179 links; SKU en la página: False
   https://www.femacba.com.ar/construccion/hormigoneras-carretillas-baldes: 187 links; SKU en la página: False
   https://www.femacba.com.ar/compresores/compresores-1: 191 links; SKU en la página: False
   https://www.femacba.com.ar/compresores: 182 links; SKU en la página: False
@@ -17,27 +33,24 @@
   https://www.femacba.com.ar/electrobombas: 182 links; SKU en la página: False
   https://www.femacba.com.ar/hogar: error 404 Client Error: Not Found for url: https://www.femacba.com.ar/hogar
   https://www.femacba.com.ar/limpieza: 182 links; SKU en la página: False
-  https://www.femacba.com.ar/aire-libre: 182 links; SKU en la página: True
-  imagen con el SKU en el nombre -> https://www.femacba.com.ar/mods/html/fil/Model/Product/24839/69365405-29791-1.jpg
-  OK 69365405 (femacba (listado)) -> 69365405.jpg [183 KB]
-69365408:
-  Drive: no hay foto para 69365408
-  Drive: nombres parecidos: 69365417.jpg, 69365417_1.jpg, 69365417_2.jpg, 69365417_3.jpg, 69365417_4.jpg, 69365417_5.jpg, 69365417_6.jpg, 69365417_7.jpg, 69365417_8.jpg, 69365417_9.jpg, 69365417_medidas.jpeg, 69365425.jpg, 69365425_1.jpg, 69365425_3.jpg, 69365425_4.jpg
-  https://femacba.com.ar '69365408': error 410 Client Error: Gone for url: https://femacba.com.ar/wp-json/wc/store/v1/products?search=69365408&per_page=50
-  https://www.femacba.com.ar/?s=69365408: 179 links; SKU en la página: False
-  https://www.femacba.com.ar/construccion/hormigoneras-carretillas-baldes: 187 links; SKU en la página: False
-  https://www.femacba.com.ar/compresores/compresores-1: 191 links; SKU en la página: False
-  https://www.femacba.com.ar/compresores: 182 links; SKU en la página: False
-  https://www.femacba.com.ar/motores/motores-a-explosion: 189 links; SKU en la página: False
-  https://www.femacba.com.ar/electrobombas/electrobombas-centrifugas-y-perifericas: 187 links; SKU en la página: False
-  https://www.femacba.com.ar/jardineria/canos-mangueras-de-riego: 191 links; SKU en la página: False
-  https://www.femacba.com.ar/listado-productos.htm: 182 links; SKU en la página: False
-  https://www.femacba.com.ar/jardineria/cortacesped: 187 links; SKU en la página: False
-  https://www.femacba.com.ar/jardineria: 182 links; SKU en la página: False
-  https://www.femacba.com.ar/electrobombas/electrobombas-sumergibles-monofasicas: 189 links; SKU en la página: False
-  https://www.femacba.com.ar/electrobombas: 182 links; SKU en la página: False
-  https://www.femacba.com.ar/hogar: error 404 Client Error: Not Found for url: https://www.femacba.com.ar/hogar
-  https://www.femacba.com.ar/limpieza: 182 links; SKU en la página: False
-  https://www.femacba.com.ar/aire-libre: 182 links; SKU en la página: True
-  imagen con el SKU en el nombre -> https://www.femacba.com.ar/mods/html/fil/Model/Product/24840/69365408-20660-1.jpg
-  OK 69365408 (femacba (listado)) -> 69365408.jpg [152 KB]
+  https://www.femacba.com.ar/aire-libre: 182 links; SKU en la página: False
+  https://www.femacba.com.ar/camping: error 404 Client Error: Not Found for url: https://www.femacba.com.ar/camping
+  https://www.femacba.com.ar/camping/reposeras: error 404 Client Error: Not Found for url: https://www.femacba.com.ar/camping/reposeras
+  https://www.femacba.com.ar/hogar-y-camping: error 404 Client Error: Not Found for url: https://www.femacba.com.ar/hogar-y-camping
+  https://www.femacba.com.ar/jardineria/reposeras: 183 links; SKU en la página: False
+  https://www.femacba.com.ar/compresores/compresores-1?pagina=2: 191 links; SKU en la página: False
+  https://www.femacba.com.ar/compresores/compresores-1?pagina=3: 191 links; SKU en la página: False
+  https://www.femacba.com.ar/compresores/compresores-1?pagina=4: 191 links; SKU en la página: False
+  https://www.femacba.com.ar/compresores/compresores-1?pagina=5: 191 links; SKU en la página: False
+  https://www.femacba.com.ar/compresores/compresores-1?p=2: 191 links; SKU en la página: False
+  https://www.femacba.com.ar/compresores/compresores-1?p=3: 191 links; SKU en la página: False
+  https://www.femacba.com.ar/compresores/compresores-1?p=4: 191 links; SKU en la página: False
+  https://www.femacba.com.ar/compresores/compresores-1?p=5: 191 links; SKU en la página: False
+  Drive: no hay foto para 69606775
+  Drive: nombres parecidos: 69606789.png, 69606790 (2).png, 69606790 (4).png, 69606790.jpg, 69606790.png, 69606792 (3).png, 69606792(2).png, 69606792.jpg, 69606797.png, 69606799 (5).jpg, 69606799.png
+  NO ENCONTRADO
+69606797:
+  Drive: candidatos ['69606797.png']
+  Drive: 69606797.png
+  OK 69606797.png (drive) -> 69606797.png [2267 KB]
+Sin foto: 69606775
