@@ -1,7 +1,2 @@
-# Un SKU por línea. Opcional: "SKU | drive" (Drive de FEMA, y si no está, la web), "SKU | link de femacba" o "SKU | texto".
-69606789 | drive
-69606790 | drive
-69606792 | drive
-69606799 | drive
-69606775 | drive
-69606797 | drive
+# Un SKU por línea. Opcional: "SKU | drive", "SKU | link de femacba" o "SKU | texto".
+69606775 | botella termica
