@@ -3,7 +3,7 @@ Productos: SINCRO PRODUCTOS FEMA BASE (datos/productos_fema.csv), solo con stock
 Precio = costo BaseLinker + 35 % + envío (10 % del costo, mín. $20.000): todas con envío gratis.
 """
 ID = "historias-robots"
-CARPETA = ""  # se completa al aprobar, p. ej. "2026-11-20-historias-robots-fema"
+CARPETA = "2026-11-19-historias-robots-fema"
 
 # Una placa por producto: (sku, título de la placa, bajada, nombre comercial, detalle)
 PLACAS = [
